@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /**
  * Configure your Gatsby site with this file.
  *
@@ -6,5 +7,8 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`
+  ],
+};
