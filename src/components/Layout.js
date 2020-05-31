@@ -1,21 +1,30 @@
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 import './Layout.css';
 
 import Header from './Header';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
     <>
       <Helmet>
-        <link href='../static/hamburgers.css' rel='stylesheet' />
+        <title>Ahmed Faaid</title>
+        <link href='hamburgers.css' rel='stylesheet' />
+        <script
+          src='https://kit.fontawesome.com/163b6190b4.js'
+          crossOrigin='anonymous'
+        >
+        </script>
       </Helmet>
       <Header />
       <div className='container'>
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   );
 }
