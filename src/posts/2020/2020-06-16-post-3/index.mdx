@@ -1,0 +1,32 @@
+---
+title: Third Post - With MDX
+description: Third dummy MDX post for new website
+date: 2020-06-09
+published: true
+---
+
+# Third Post
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eros ex, lobortis eget suscipit at, bibendum eget est. Duis fermentum nec felis sit amet pretium. Etiam vitae imperdiet neque. Cras facilisis varius pretium. Donec a aliquet sem. Donec lobortis diam eget nulla condimentum, id mollis ipsum sollicitudin. Sed lobortis dapibus tortor, dignissim varius orci hendrerit eu. Proin id laoreet elit. Maecenas pellentesque commodo justo, in tristique lorem laoreet at.
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+export default const Contact = () => {
+  const [fixed, setFixed] = useState(true);
+
+  useEffect(() => {
+    setFixed(true);
+  }, [ready])
+
+  return (
+    <div>
+      <h1>About Us</h1>
+      {fixed ? <p>Its Fixed!</p> : <p>Not Fixed</p>}
+      <button onClick={() => setFixed(!fixed)}>Click Me!</button>
+    </div>
+  );
+}
+```
+
+Praesent a auctor purus. Nullam quis urna eleifend, tincidunt ipsum sit amet, cursus est. Quisque tristique urna non augue lacinia mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam posuere in leo convallis consequat. Nulla quis orci vitae purus porttitor dictum ut a libero.
