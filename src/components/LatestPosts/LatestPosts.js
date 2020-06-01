@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import Post from '../Post/Post';
 
 export const latestPostsQuery = graphql`
   query {
@@ -34,11 +33,24 @@ export default function LatestPosts() {
           return (
             <>
               {postArray.map(({ frontmatter }) => (
-                <Post
+                <div
                   key={frontmatter.date}
-                  title={frontmatter.title}
-                  description={frontmatter.description}
-                />
+                  className='bg-white my-5 p-2 rounded-sm border-b-2 border-primary border-opacity-50 shadow-md'
+                >
+                  <Link to='/'>
+                    <h3 className='font-heading text-xl'>
+                      {frontmatter.title}
+                    </h3>
+                  </Link>
+                  <p className='font-body italic font-light text-lg py-3'>
+                    {frontmatter.description}
+                  </p>
+                  <Link to='/' className='text-primary'>
+                    Read more
+                    {' '}
+                    <span>&rarr;</span>
+                  </Link>
+                </div>
               ))}
             </>
           );

@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-export default function Post({ title, description }) {
+export default function Post({ title, description, fluid }) {
   return (
-    <div className='bg-white my-5 p-2 rounded-sm border-b-2 border-primary border-opacity-50 shadow-md'>
+    <div className='bg-white w-4/5 m-auto rounded-sm shadow-md mb-12 p-3'>
       <Link to='/'>
-        <h3 className='font-heading text-xl'>{title}</h3>
+        <Img
+          className='w-full m-auto mb-8'
+          fluid={fluid}
+          alt='Blog Image'
+        />
+      </Link>
+      <Link to='/'>
+        <h3 className='font-heading text-xl my-5'>{title}</h3>
       </Link>
       <p className='font-body italic font-light text-lg py-3'>
         {description}
       </p>
-      <Link to='/' className='text-primary'>
-        Read more
-        {' '}
-        <span>&rarr;</span>
-      </Link>
     </div>
   );
 }
@@ -23,4 +26,5 @@ export default function Post({ title, description }) {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  fluid: PropTypes.instanceOf(Object).isRequired,
 };

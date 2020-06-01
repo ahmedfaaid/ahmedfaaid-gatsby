@@ -38,7 +38,7 @@ export default function Navbar() {
       >
         <ul>
           <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
-            <Link to='/'>Blog</Link>
+            <Link to='/blog'>Blog</Link>
           </li>
           <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
             <Link to='/projects'>Projects</Link>
