@@ -13,11 +13,14 @@ export const allPostsQuery = graphql`
           date
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 400) {
+              fluid(maxWidth: 600) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
+        }
+        fields {
+          slug
         }
       }
     }
@@ -35,12 +38,13 @@ export default function Blog() {
             const postArray = data.allMdx.nodes;
             return (
               <div>
-                {postArray.map(({ frontmatter }) => (
+                {postArray.map(({ frontmatter, fields }) => (
                   <>
                     <Post
                       key={frontmatter.date}
                       title={frontmatter.title}
                       description={frontmatter.description}
+                      slug={fields.slug}
                       fluid={frontmatter.featuredImage.childImageSharp.fluid}
                     />
                   </>

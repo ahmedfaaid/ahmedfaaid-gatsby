@@ -10,6 +10,9 @@ export const latestPostsQuery = graphql`
           description
           date
         }
+        fields {
+          slug
+        }
       }
     }
   }
@@ -32,12 +35,12 @@ export default function LatestPosts() {
           const postArray = data.allMdx.nodes;
           return (
             <>
-              {postArray.map(({ frontmatter }) => (
+              {postArray.map(({ frontmatter, fields }) => (
                 <div
                   key={frontmatter.date}
                   className='bg-white my-5 p-2 rounded-sm border-b-2 border-primary border-opacity-50 shadow-md'
                 >
-                  <Link to='/'>
+                  <Link to={`/${fields.slug}`}>
                     <h3 className='font-heading text-xl'>
                       {frontmatter.title}
                     </h3>
@@ -45,7 +48,7 @@ export default function LatestPosts() {
                   <p className='font-body italic font-light text-lg py-3'>
                     {frontmatter.description}
                   </p>
-                  <Link to='/' className='text-primary'>
+                  <Link to={`/${fields.slug}`} className='text-primary'>
                     Read more
                     {' '}
                     <span>&rarr;</span>
