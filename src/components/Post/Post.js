@@ -21,9 +21,11 @@ export default function Post({
       <Link to={`/${slug}`}>
         <h3 className='font-heading text-xl my-5'>{title}</h3>
       </Link>
-      <p className='font-body italic font-light text-lg py-3'>
-        {description}
-      </p>
+      <Link to={`/${slug}`}>
+        <p className='font-body italic font-light text-lg py-3'>
+          {description}
+        </p>
+      </Link>
     </div>
   );
 }

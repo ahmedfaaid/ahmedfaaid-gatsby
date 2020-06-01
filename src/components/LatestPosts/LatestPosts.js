@@ -45,9 +45,11 @@ export default function LatestPosts() {
                       {frontmatter.title}
                     </h3>
                   </Link>
-                  <p className='font-body italic font-light text-lg py-3'>
-                    {frontmatter.description}
-                  </p>
+                  <Link to={`/${fields.slug}`}>
+                    <p className='font-body italic font-light text-lg py-3'>
+                      {frontmatter.description}
+                    </p>
+                  </Link>
                   <Link to={`/${fields.slug}`} className='text-primary'>
                     Read more
                     {' '}
