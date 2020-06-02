@@ -11,7 +11,7 @@ export const postQuery = graphql`
       body
       frontmatter {
         title
-        date
+        description
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -39,6 +39,7 @@ export default function singlePost({ data: { mdx } }) {
           {' '}
           on Unsplash
         </p>
+        <p className='font-body italic font-light text-lg text-center py-3'>{mdx.frontmatter.description}</p>
         <div>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
