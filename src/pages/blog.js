@@ -5,12 +5,15 @@ import Post from '../components/Post/Post';
 
 export const allPostsQuery = graphql`
   query {
-    allMdx(filter: { frontmatter: { published: { eq: true } } }) {
+    allMdx(
+      filter: { frontmatter: { published: { eq: true } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
+        id
         frontmatter {
           title
           description
-          date
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 600) {
@@ -30,7 +33,9 @@ export const allPostsQuery = graphql`
 export default function Blog() {
   return (
     <Layout>
-      <h1 className='font-heading text-4xl text-secondary text-center my-4'>Blog</h1>
+      <h1 className='font-heading text-4xl text-secondary text-center my-4'>
+        Blog
+      </h1>
       <section>
         <StaticQuery
           query={allPostsQuery}
@@ -38,10 +43,10 @@ export default function Blog() {
             const postArray = data.allMdx.nodes;
             return (
               <div>
-                {postArray.map(({ frontmatter, fields }) => (
+                {postArray.map(({ id, frontmatter, fields }) => (
                   <>
                     <Post
-                      key={frontmatter.date}
+                      key={id}
                       title={frontmatter.title}
                       description={frontmatter.description}
                       slug={fields.slug}

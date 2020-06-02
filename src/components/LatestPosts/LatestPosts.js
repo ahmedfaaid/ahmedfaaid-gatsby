@@ -3,12 +3,15 @@ import { Link, graphql, StaticQuery } from 'gatsby';
 
 export const latestPostsQuery = graphql`
   query {
-    allMdx(filter: { frontmatter: { published: { eq: true } } }) {
+    allMdx(
+      filter: { frontmatter: { published: { eq: true } } },
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
+        id
         frontmatter {
           title
           description
-          date
         }
         fields {
           slug
@@ -35,9 +38,9 @@ export default function LatestPosts() {
           const postArray = data.allMdx.nodes;
           return (
             <>
-              {postArray.map(({ frontmatter, fields }) => (
+              {postArray.map(({ id, frontmatter, fields }) => (
                 <div
-                  key={frontmatter.date}
+                  key={id}
                   className='bg-white my-5 p-2 rounded-sm border-b-2 border-primary border-opacity-50 shadow-md'
                 >
                   <Link to={`/${fields.slug}`}>
