@@ -29,8 +29,8 @@ export const postQuery = graphql`
 export default function singlePost({ data: { mdx } }) {
   return (
     <Layout>
-      <h1 className='justify-center text-center text-2xl text-secondary font-heading font-semibold my-4'>{mdx.frontmatter.title}</h1>
-      <div className='px-4'>
+      <h1 className='font-heading text-4xl text-secondary text-center my-4'>{mdx.frontmatter.title}</h1>
+      <div className='px-4 w-full'>
         <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
         <p className='my-4 text-center font-body'>
           Photo by

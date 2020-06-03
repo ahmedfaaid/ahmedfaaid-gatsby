@@ -27,6 +27,7 @@
         "arrow-parens": ["warn", "as-needed"],
         "quotes": ["warn", "single"],
         "jsx-quotes": ["warn", "prefer-single"],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-props-no-spreading": "off"
     }
 }
