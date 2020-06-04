@@ -3,6 +3,7 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import nightOwl from 'prism-react-renderer/themes/nightOwl';
 
 const components = {
   h1: ({ children }) => (
@@ -11,7 +12,7 @@ const components = {
     </h1>
   ),
   p: ({ children }) => (
-    <p className='font-body font-thin text-xl leading-loose tracking-wide'>
+    <p className='font-body font-thin text-lg leading-loose tracking-wide'>
       {children}
     </p>
   ),
@@ -21,6 +22,7 @@ const components = {
       <Highlight
         {...defaultProps}
         code={children.props.children}
+        theme={nightOwl}
         language='jsx'
       >
         {({
@@ -30,15 +32,17 @@ const components = {
           getLineProps,
           getTokenProps,
         }) => (
-          <pre className={className} style={style}>
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </pre>
+          <div className='overflow-scroll'>
+            <pre className={className} style={style}>
+              {tokens.map((line, i) => (
+                <div {...getLineProps({ line, key: i })}>
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              ))}
+            </pre>
+          </div>
         )}
       </Highlight>
     );
