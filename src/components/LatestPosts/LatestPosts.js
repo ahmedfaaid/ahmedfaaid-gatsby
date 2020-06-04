@@ -23,12 +23,12 @@ export const latestPostsQuery = graphql`
 
 export default function LatestPosts() {
   return (
-    <section className='bg-gray-100 py-8 px-6'>
+    <section className='py-8 px-6'>
       <div className='flex justify-between items-center'>
-        <h2 className='font-heading font-semibold text-xl py-4 text-secondary'>
+        <h2 className='font-heading font-semibold text-xl py-4 text-primary'>
           Latest Posts
         </h2>
-        <Link to='/blog' className='text-primary'>
+        <Link to='/blog' className='text-white'>
           All posts
         </Link>
       </div>
@@ -41,15 +41,15 @@ export default function LatestPosts() {
               {postArray.map(({ id, frontmatter, fields }) => (
                 <div
                   key={id}
-                  className='bg-white my-5 p-2 rounded-sm border-b-2 border-primary border-opacity-50 shadow-md'
+                  className='bg-dark-3 my-5 p-2 rounded-sm border-b-2 border-primary border-opacity-50'
                 >
                   <Link to={`/${fields.slug}`}>
-                    <h3 className='font-heading text-xl'>
+                    <h3 className='font-heading text-xl text-gray-400'>
                       {frontmatter.title}
                     </h3>
                   </Link>
                   <Link to={`/${fields.slug}`}>
-                    <p className='font-body italic font-light text-lg py-3'>
+                    <p className='font-body italic font-light text-lg py-3 text-gray-400'>
                       {frontmatter.description}
                     </p>
                   </Link>

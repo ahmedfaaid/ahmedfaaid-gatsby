@@ -9,7 +9,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='bg-gray-100 py-6 text-primary border-b-2 border-primary border-opacity-50'>
+    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50'>
       <div className='flex justify-between items-center pl-4 pr-1'>
         <div>
           <Link
@@ -34,7 +34,7 @@ export default function Navbar() {
       <div
         className={`${
           menuOpen ? 'flex' : 'hidden'
-        } justify-center items-center text-center bg-gray-100 absolute top-0 left-0 h-full w-full z-10`}
+        } justify-center items-center text-center bg-dark-1 absolute top-0 left-0 h-full w-full z-10`}
       >
         <ul>
           <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
