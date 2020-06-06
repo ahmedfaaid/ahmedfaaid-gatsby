@@ -20,6 +20,14 @@ module.exports = {
           '5': '#262626',
           '6': '#2C2C2C',
         },
+        twitter: {
+          blue: '#1DA1F2',
+          white: '#f5f8fa',
+        },
+        github: {
+          white: '#fafafa',
+          dark: '#333',
+        },
       },
       inset: {
         '1/2': '50%',

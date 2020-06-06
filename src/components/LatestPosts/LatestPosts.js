@@ -25,7 +25,7 @@ export default function LatestPosts() {
   return (
     <section className='py-8 px-6'>
       <div className='flex justify-between items-center'>
-        <h2 className='font-heading font-semibold text-xl py-4 text-primary'>
+        <h2 className='font-heading font-semibold text-xl py-4 text-white'>
           Latest Posts
         </h2>
         <Link to='/blog' className='text-white'>
