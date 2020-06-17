@@ -1,0 +1,30 @@
+[
+  {
+    "name": "YelpCamp",
+    "image": "./images/YelpCamp.jpg",
+    "description": "YelpCamp is a fictional campground info and review web app built with NodeJS, Express and MongoDB",
+    "deployed": "https://nameless-sands-78625.herokuapp.com/",
+    "github": "https://github.com/ahmedfaaid/yelp-camp-project"
+  },
+  {
+    "name": "Beats'N'Vibes",
+    "image": "./images/Beats'N'Vibes.png",
+    "description": "Beats'N'Vibes is a fictional DJ blog built using GatsbyJS, GraphQL and Contentful CMS",
+    "deployed": "https://objective-wozniak-6dbb27.netlify.app/",
+    "github": "https://github.com/ahmedfaaid/beatsnvibes"
+  },
+  {
+    "name": "Sneakersseur",
+    "image": "./images/sneakersseur.png",
+    "description": "Sneakersseur is a sneaker news website built with GatsbyJS, ReactJS, GraphQL and Markdown files",
+    "deployed": "https://sneakersseur.netlify.app/",
+    "github": "https://github.com/ahmedfaaid/sneak"
+  },
+  {
+    "name": "COVID-19 Tracker",
+    "image": "./images/covid.png",
+    "description": "COVID-19 Trackeris a simple tracker that displays the latest global and country cases",
+    "deployed": "https://covid-19-ahmed.now.sh/",
+    "github": "https://github.com/ahmedfaaid/covid-19-tracker"
+  }
+]
