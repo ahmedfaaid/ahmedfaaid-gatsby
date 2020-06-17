@@ -6,13 +6,13 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import nightOwl from 'prism-react-renderer/themes/nightOwl';
 
 const components = {
-  h1: ({ children }) => (
-    <h1 className='font-heading text-2xl text-secondary text-center my-4'>
+  h2: ({ children }) => (
+    <h2 className='font-heading text-2xl text-primary text-center my-4'>
       {children}
-    </h1>
+    </h2>
   ),
   p: ({ children }) => (
-    <p className='font-body font-thin text-lg leading-loose tracking-wide'>
+    <p className='font-body font-thin text-lg text-white leading-relaxed'>
       {children}
     </p>
   ),
@@ -32,7 +32,7 @@ const components = {
           getLineProps,
           getTokenProps,
         }) => (
-          <div className='overflow-scroll'>
+          <div className='overflow-scroll my-4'>
             <pre className={`${className} p-4 float-left`} style={style}>
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>

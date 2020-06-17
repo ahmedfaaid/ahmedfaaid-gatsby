@@ -29,18 +29,18 @@ export const postQuery = graphql`
 export default function singlePost({ data: { mdx } }) {
   return (
     <Layout>
-      <h1 className='font-heading text-4xl text-secondary text-center my-4'>{mdx.frontmatter.title}</h1>
+      <h1 className='font-heading text-4xl text-white text-center my-4'>{mdx.frontmatter.title}</h1>
       <div className='px-4 w-full'>
         <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
-        <p className='my-4 text-center font-body'>
+        <p className='my-4 text-center font-body text-white'>
           Photo by
           {' '}
           <a href={mdx.frontmatter.imageLink} target='_blank' rel='noreferrer noopener' className='text-primary'>{mdx.frontmatter.imageCreator}</a>
           {' '}
           on Unsplash
         </p>
-        <p className='font-body italic font-light text-lg text-center py-3'>{mdx.frontmatter.description}</p>
-        <div>
+        <p className='font-body italic font-light text-lg text-center text-white py-3'>{mdx.frontmatter.description}</p>
+        <div className='mb-4'>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
       </div>

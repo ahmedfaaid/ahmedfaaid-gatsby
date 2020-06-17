@@ -10,7 +10,7 @@ export default function Post({
   fluid,
 }) {
   return (
-    <div className='bg-white w-4/5 m-auto rounded-sm shadow-md mb-12 p-3'>
+    <div className='bg-dark-3 w-4/5 m-auto rounded-sm shadow-md mb-12 p-3'>
       <Link to={`/${slug}`}>
         <Img
           className='w-full m-auto mb-8'
@@ -19,10 +19,10 @@ export default function Post({
         />
       </Link>
       <Link to={`/${slug}`}>
-        <h3 className='font-heading text-xl my-5'>{title}</h3>
+        <h3 className='font-heading text-xl text-white my-5'>{title}</h3>
       </Link>
       <Link to={`/${slug}`}>
-        <p className='font-body italic font-light text-lg py-3'>
+        <p className='font-body italic font-light text-lg text-white py-3'>
           {description}
         </p>
       </Link>

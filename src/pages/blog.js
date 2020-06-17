@@ -33,7 +33,7 @@ export const allPostsQuery = graphql`
 export default function Blog() {
   return (
     <Layout>
-      <h1 className='font-heading text-4xl text-secondary text-center my-4'>
+      <h1 className='font-heading text-4xl text-primary text-center my-4'>
         Blog
       </h1>
       <section>

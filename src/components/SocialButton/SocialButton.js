@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 export default function SocialButton({ name }) {
   return (
-    <button
-      type='button'
+    <a
+      href={name === 'twitter' ? 'https://twitter.com/mr_amed' : 'https://github.com/ahmedfaaid'}
+      target='_blank'
+      rel='noreferrer noopener'
       className={`${
         name === 'twitter'
           ? 'bg-twitter-blue text-white'
@@ -14,7 +16,7 @@ export default function SocialButton({ name }) {
       <i className={`fab fa-${name} mr-1`} />
       {' '}
       {name}
-    </button>
+    </a>
   );
 }
 
