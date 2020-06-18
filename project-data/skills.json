@@ -1,0 +1,42 @@
+[
+  {
+    "name": "HTML",
+    "icon": "fab fa-html5"
+  },
+  {
+    "name": "CSS",
+    "icon": "fab fa-css3-alt"
+  },
+  {
+    "name": "SASS/SCSS",
+    "icon": "fab fa-sass"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "fab fa-js-square"
+  },
+  {
+    "name": "React",
+    "icon": "fab fa-react"
+  },
+  {
+    "name": "Node",
+    "icon": "fab fa-node"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "devicon-mongodb-plain"
+  },
+  {
+    "name": "Postgresql",
+    "icon": "devicon-postgresql-plain"
+  },
+  {
+    "name": "Git",
+    "icon": "devicon-git-plain"
+  },
+  {
+    "name": "Docker",
+    "icon": "devicon-docker-plain"
+  }
+]
