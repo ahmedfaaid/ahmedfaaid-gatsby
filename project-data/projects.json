@@ -1,5 +1,6 @@
 [
   {
+    "projectId": "1",
     "name": "YelpCamp",
     "image": "./images/YelpCamp.jpg",
     "description": "YelpCamp is a fictional campground info and review web app built with NodeJS, Express and MongoDB",
@@ -7,6 +8,7 @@
     "github": "https://github.com/ahmedfaaid/yelp-camp-project"
   },
   {
+    "projectId": "2",
     "name": "Beats'N'Vibes",
     "image": "./images/Beats'N'Vibes.png",
     "description": "Beats'N'Vibes is a fictional DJ blog built using GatsbyJS, GraphQL and Contentful CMS",
@@ -14,6 +16,7 @@
     "github": "https://github.com/ahmedfaaid/beatsnvibes"
   },
   {
+    "projectId": "3",
     "name": "Sneakersseur",
     "image": "./images/sneakersseur.png",
     "description": "Sneakersseur is a sneaker news website built with GatsbyJS, ReactJS, GraphQL and Markdown files",
@@ -21,6 +24,7 @@
     "github": "https://github.com/ahmedfaaid/sneak"
   },
   {
+    "projectId": "4",
     "name": "COVID-19 Tracker",
     "image": "./images/covid.png",
     "description": "COVID-19 Trackeris a simple tracker that displays the latest global and country cases",

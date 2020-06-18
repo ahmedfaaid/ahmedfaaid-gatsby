@@ -1,12 +1,11 @@
 import React from 'react';
-// import Img from 'gatsby-image';
 import { graphql, StaticQuery } from 'gatsby';
 import Layout from '../components/Layout';
 import Project from '../components/Project/Project';
 
 export const allProjectsQuery = graphql`
   query {
-    allProjectsJson {
+    allProjectsJson(sort: {fields: projectId, order: DESC}) {
       edges {
         node {
           deployed
@@ -42,7 +41,7 @@ export default function Projects() {
               return (
                 <>
                   {projects.map(({ node: project }) => (
-                    <Project name={project.name} />
+                    <Project project={project} />
                   ))}
                 </>
               );
