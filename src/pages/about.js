@@ -4,7 +4,7 @@ import { StaticQuery, useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 
-export const imageQuery = graphql`
+export const aboutQuery = graphql`
   query {
     file(relativePath: {eq: "ahmed-w1000.jpg"}) {
       childImageSharp {
@@ -13,11 +13,17 @@ export const imageQuery = graphql`
         }
       }
     }
+    allSkillsJson {
+      nodes {
+        name
+        icon
+      }
+    }
   }
 `;
 
 export default function About() {
-  const myImage = useStaticQuery(imageQuery);
+  const myImage = useStaticQuery(aboutQuery);
 
   return (
     <Layout>
@@ -38,8 +44,25 @@ export default function About() {
           </p>
         </div>
         <div>
-          <h2>Skills</h2>
-
+          <h2 className='font-heading text-2xl text-white text-center my-4'>Skills</h2>
+          <div className='bg-dark-3 w-5/6 mx-auto my-4 rounded-sm shadow-md p-3 flex flex-wrap justify-center'>
+            <StaticQuery
+              query={aboutQuery}
+              render={data => {
+                const skills = data.allSkillsJson.nodes;
+                return (
+                  <>
+                    {skills.map(node => (
+                      <div className='w-1/2 m-auto text-center text-white p-8'>
+                        <i className={`${node.icon} text-3xl`} />
+                        <p className='mt-2'>{node.name}</p>
+                      </div>
+                    ))}
+                  </>
+                );
+              }}
+            />
+          </div>
         </div>
       </section>
     </Layout>

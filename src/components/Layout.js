@@ -14,6 +14,10 @@ export default function Layout({ children }) {
       <Helmet>
         <title>Ahmed Faaid</title>
         <link href='hamburgers.css' rel='stylesheet' />
+        <link
+          rel='stylesheet'
+          href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'
+        />
         <script
           src='https://kit.fontawesome.com/163b6190b4.js'
           crossOrigin='anonymous'
