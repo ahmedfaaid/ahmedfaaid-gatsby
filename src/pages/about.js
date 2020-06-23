@@ -6,9 +6,9 @@ import Layout from '../components/Layout';
 
 export const aboutQuery = graphql`
   query {
-    file(relativePath: {eq: "ahmed-w1000.jpg"}) {
+    file(relativePath: {eq: "ahmed-w2000.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 600) {
+        fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid
         }
       }
