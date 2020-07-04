@@ -32,7 +32,7 @@ export default function About() {
         <Img
           fluid={myImage.file.childImageSharp.fluid}
           alt='Ahmed Faaid'
-          className='w-5/6 m-auto'
+          className='w-5/6 lg:w-2/3 m-auto'
         />
         <div className='bg-dark-3 w-5/6 mx-auto my-4 rounded-sm shadow-md p-3'>
           <p className='font-body font-thin text-lg text-white leading-relaxed'>
@@ -53,7 +53,7 @@ export default function About() {
                 return (
                   <>
                     {skills.map(node => (
-                      <div className='w-1/2 m-auto text-center text-white p-8'>
+                      <div className='w-1/2 md:w-1/3 m-auto text-center text-white p-8'>
                         <i className={`${node.icon} text-3xl`} />
                         <p className='mt-2'>{node.name}</p>
                       </div>
