@@ -42,7 +42,7 @@ export default function Blog() {
           render={data => {
             const postArray = data.allMdx.nodes;
             return (
-              <div>
+              <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2'>
                 {postArray.map(({ id, frontmatter, fields }) => (
                   <>
                     <Post
