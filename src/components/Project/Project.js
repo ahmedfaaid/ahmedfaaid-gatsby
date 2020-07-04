@@ -2,9 +2,11 @@ import React from 'react';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
+import './Project.css';
+
 export default function Project({ project }) {
   return (
-    <div className='bg-dark-3 w-4/5 m-auto rounded-sm shadow-md mb-12 p-3 text-center'>
+    <div className='card bg-dark-3 w-4/5 m-auto rounded-sm shadow-md mb-12 p-3 text-center'>
       <a
         href={project.deployed}
         target='_blank'

@@ -15,7 +15,7 @@ export const allProjectsQuery = graphql`
           name
           image {
             childImageSharp {
-              fluid(maxWidth: 600) {
+              fluid(maxWidth: 600, maxHeight: 350) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -33,7 +33,7 @@ export default function Projects() {
         Projects
       </h1>
       <section>
-        <div>
+        <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2'>
           <StaticQuery
             query={allProjectsQuery}
             render={data => {
