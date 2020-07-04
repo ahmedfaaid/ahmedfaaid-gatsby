@@ -24,11 +24,13 @@ export default function Layout({ children }) {
         >
         </script>
       </Helmet>
-      <Header />
-      <div className='container'>
-        <main>{children}</main>
+      <div className='relative min-h-screen'>
+        <Header />
+        <div className='container pb-16'>
+          <main>{children}</main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

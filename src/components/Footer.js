@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className='bg-primary py-6'>
+    <footer className='bg-primary absolute w-full bottom-0 h-16 flex items-center justify-center'>
       <div>
-        <ul className='flex justify-center mt-3 md:mt-0'>
+        <ul className='flex justify-center'>
           <li>
             <a
               href='https://twitter.com/mr_amed'
