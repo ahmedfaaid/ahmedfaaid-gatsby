@@ -9,7 +9,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50'>
+    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50 md:relative'>
       <div className='flex justify-between items-center pl-4 pr-1'>
         <div>
           <Link
@@ -20,7 +20,7 @@ export default function Navbar() {
           </Link>
         </div>
         <button
-          className={`hamburger hamburger--spring z-20 ${
+          className={`inline-block md:hidden hamburger hamburger--spring z-20 ${
             menuOpen ? 'is-active' : ''
           }`}
           type='button'
@@ -33,20 +33,20 @@ export default function Navbar() {
       </div>
       <div
         className={`${
-          menuOpen ? 'flex' : 'hidden'
-        } justify-center items-center text-center bg-dark-1 absolute top-0 left-0 h-full w-full z-10`}
+          menuOpen ? 'flex' : 'hidden md:flex'
+        } justify-center md:justify-end items-center text-center bg-dark-1 md:bg-transparent absolute top-0 md:top-1/2 right-0 h-full md:h-auto w-full md:w-auto z-10 md:pr-4 md:transform md:-translate-y-1/2`}
       >
-        <ul>
-          <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
+        <ul className='md:flex md:items-center'>
+          <li className='mb-3 md:mb-0 py-4 text-2xl md:text-xl md:font-heading md:mr-5 tracking-wide font-light'>
             <Link to='/blog'>Blog</Link>
           </li>
-          <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
+          <li className='mb-3 md:mb-0 py-4 text-2xl md:text-xl md:font-heading md:mr-5 tracking-wide font-light'>
             <Link to='/projects'>Projects</Link>
           </li>
-          <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
+          <li className='mb-3 md:mb-0 py-4 text-2xl md:text-xl md:font-heading md:mr-5 tracking-wide font-light'>
             <Link to='/about'>About</Link>
           </li>
-          <li className='mb-3 py-4 text-2xl tracking-wide font-light'>
+          <li className='mb-3 md:mb-0 py-4 text-2xl md:text-xl md:font-heading tracking-wide font-light'>
             <Link to='/contact'>Contact</Link>
           </li>
         </ul>

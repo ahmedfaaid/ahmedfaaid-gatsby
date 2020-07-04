@@ -37,7 +37,7 @@ export default function LatestPosts() {
         render={data => {
           const postArray = data.allMdx.nodes;
           return (
-            <>
+            <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2'>
               {postArray.map(({ id, frontmatter, fields }) => (
                 <div
                   key={id}
@@ -60,7 +60,7 @@ export default function LatestPosts() {
                   </Link>
                 </div>
               ))}
-            </>
+            </div>
           );
         }}
       />
