@@ -11,7 +11,7 @@
     "projectId": "2",
     "name": "Beats'N'Vibes",
     "image": "./images/Beats'N'Vibes.png",
-    "description": "Beats'N'Vibes is a fictional DJ blog built using GatsbyJS, GraphQL and Contentful CMS",
+    "description": "Beats'N'Vibes is a fictional DJ blog built using GatsbyJS, GraphQL and data sourced from Contentful CMS",
     "deployed": "https://objective-wozniak-6dbb27.netlify.app/",
     "github": "https://github.com/ahmedfaaid/beatsnvibes"
   },
@@ -27,7 +27,7 @@
     "projectId": "4",
     "name": "COVID-19 Tracker",
     "image": "./images/covid.png",
-    "description": "COVID-19 Trackeris a simple tracker that displays the latest global and country cases",
+    "description": "COVID-19 Tracker displays the latest global and country cases. It is built with NextJS with data from a REST API",
     "deployed": "https://covid-19-ahmed.now.sh/",
     "github": "https://github.com/ahmedfaaid/covid-19-tracker"
   }
