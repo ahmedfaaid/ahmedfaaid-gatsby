@@ -4,8 +4,9 @@ Redesigning and developing my personal website using Gatsby.js
 
 ## TODO
 - [x] Contact Page
+- [x] Responsiveness
+- [ ] Pages SEO
 - [ ] Contact form functionality
-- [ ] Responsiveness
 - [ ] First blog post
 
 Photo by Alexandre Debiève on Unsplash - Post 1
