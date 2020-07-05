@@ -33,7 +33,7 @@ const components = {
           getTokenProps,
         }) => (
           <div className='overflow-scroll my-4'>
-            <pre className={`${className} p-4 float-left`} style={style}>
+            <pre className={`${className} p-4 float-left md:float-none`} style={style}>
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
