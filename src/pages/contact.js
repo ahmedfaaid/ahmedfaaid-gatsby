@@ -7,7 +7,7 @@ export default function Contact() {
     <Layout>
       <h1 className='font-heading text-4xl text-primary text-center my-4'>Contact</h1>
       <section>
-        <div className='bg-dark-3 w-5/6 m-auto mb-2 py-2'>
+        <div className='bg-dark-3 w-5/6 md:w-2/3 lg:w-1/3 m-auto mb-2 py-2'>
           <h2 className='font-heading text-2xl text-white text-center my-4'>Get In Touch</h2>
           <form className='w-full p-4 text-center'>
             <div>
@@ -35,6 +35,14 @@ export default function Contact() {
                 placeholder='Message'
                 className='w-full h-40 bg-dark-6 text-white rounded p-2 my-4'
               />
+            </div>
+            <div>
+              <button
+                type='submit'
+                className='bg-primary hover:bg-secondary px-12 py-4 rounded-full text-white text-lg'
+              >
+                Send
+              </button>
             </div>
           </form>
         </div>
