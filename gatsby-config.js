@@ -12,7 +12,7 @@ module.exports = {
     titleTemplate: `%s | Ahmed Faaid`,
     description:
       `Freelance web developer based in Hamilton, Canada, specializing in React, Node and JavaScript technologies`,
-    siteUrl: `https://ahmedfaaid.com`,
+    siteUrl: `https://pedantic-keller-406b64.netlify.app/`,
     image: `/images/ahmed-w-2000.jpg`,
     twitterUsername: `@mr_amed`,
   },
