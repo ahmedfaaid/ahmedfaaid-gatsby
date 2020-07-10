@@ -78,7 +78,6 @@ module.exports = {
                     node {
                       fields {
                         slug
-                        date
                       }
                       frontmatter {
                         title
