@@ -8,13 +8,13 @@ export default function Hero() {
         <h1 className='text-white text-3xl text-center font-body font-semibold'>
           Hey, I&apos;m Ahmed Faaid
         </h1>
-        <p className='text-white text-lg font-body font-light mt-3'>
+        <p className='text-white text-lg text-center font-body font-light mt-3'>
           I&apos;m a freelance web and software developer
         </p>
-        <p className='text-white text-lg font-body font-light mt-3'>
+        <p className='text-white text-lg text-center font-body font-light mt-3'>
           I love to work with React(Gatsby and Next) and Node
         </p>
-        <div className='text-center mt-8'>
+        <div className='sm:text-center mt-8'>
           <SocialButton name='twitter' />
           <SocialButton name='github' />
         </div>
