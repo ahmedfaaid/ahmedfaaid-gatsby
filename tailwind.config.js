@@ -1,7 +1,4 @@
 module.exports = {
-  purge: [
-    './src/components/Navbar/Navbar.js',
-  ],
   theme: {
     extend: {
       container: {
