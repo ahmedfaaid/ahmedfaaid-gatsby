@@ -7,6 +7,15 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Ahmed Faaid | Freelance Developer`,
+    titleTemplate: `%s | Ahmed Faaid`,
+    description:
+      `Freelance web developer based in Hamilton, Canada, specializing in React, Node and JavaScript technologies`,
+    siteUrl: `https://ahmedfaaid.com`,
+    image: `/images/ahmed-w-2000.jpg`,
+    twitterUsername: `@mr_amed`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
@@ -34,5 +43,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-sitemap`,
   ],
 };

@@ -28,7 +28,12 @@ export const postQuery = graphql`
 
 export default function singlePost({ data: { mdx } }) {
   return (
-    <Layout>
+    <Layout
+      title={mdx.frontmatter.title}
+      description={mdx.frontmatter.description}
+      image={mdx.frontmatter.featuredImage.childImageSharp.fluid.src}
+      article
+    >
       <h1 className='font-heading text-4xl text-white text-center my-4'>{mdx.frontmatter.title}</h1>
       <div className='px-4 w-full'>
         <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />

@@ -28,7 +28,7 @@ export const allProjectsQuery = graphql`
 
 export default function Projects() {
   return (
-    <Layout>
+    <Layout title='Projects'>
       <h1 className='font-heading text-4xl text-primary text-center my-4'>
         Projects
       </h1>

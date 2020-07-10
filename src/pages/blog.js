@@ -32,7 +32,7 @@ export const allPostsQuery = graphql`
 
 export default function Blog() {
   return (
-    <Layout>
+    <Layout title='Blog'>
       <h1 className='font-heading text-4xl text-primary text-center my-4'>
         Blog
       </h1>

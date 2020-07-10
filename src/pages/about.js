@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { StaticQuery, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 
@@ -23,14 +23,14 @@ export const aboutQuery = graphql`
 `;
 
 export default function About() {
-  const myImage = useStaticQuery(aboutQuery);
+  const { file, allSkillsJson } = useStaticQuery(aboutQuery);
 
   return (
-    <Layout>
+    <Layout title='About'>
       <h1 className='font-heading text-4xl text-primary text-center my-4'>About</h1>
       <section>
         <Img
-          fluid={myImage.file.childImageSharp.fluid}
+          fluid={file.childImageSharp.fluid}
           alt='Ahmed Faaid'
           className='w-5/6 lg:w-2/3 m-auto'
         />
@@ -46,22 +46,14 @@ export default function About() {
         <div>
           <h2 className='font-heading text-2xl text-white text-center my-4'>Skills</h2>
           <div className='bg-dark-3 w-5/6 mx-auto my-4 rounded-sm shadow-md p-3 flex flex-wrap justify-center'>
-            <StaticQuery
-              query={aboutQuery}
-              render={data => {
-                const skills = data.allSkillsJson.nodes;
-                return (
-                  <>
-                    {skills.map(node => (
-                      <div className='w-1/2 md:w-1/3 m-auto text-center text-white p-8'>
-                        <i className={`${node.icon} text-3xl`} />
-                        <p className='mt-2'>{node.name}</p>
-                      </div>
-                    ))}
-                  </>
-                );
-              }}
-            />
+            <>
+              {allSkillsJson.nodes.map(node => (
+                <div className='w-1/2 md:w-1/3 m-auto text-center text-white p-8'>
+                  <i className={`${node.icon} text-3xl`} />
+                  <p className='mt-2'>{node.name}</p>
+                </div>
+              ))}
+            </>
           </div>
         </div>
       </section>

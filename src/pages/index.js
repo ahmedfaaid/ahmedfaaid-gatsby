@@ -5,7 +5,7 @@ import LatestPosts from '../components/LatestPosts/LatestPosts';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title='Home'>
       <Hero />
       <LatestPosts />
     </Layout>
