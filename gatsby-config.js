@@ -101,7 +101,7 @@ module.exports = {
         short_name: `Ahmed Faaid`,
         start_url: `/`,
         background_color: `#121212`,
-        theme_color: `#6b37bf`,
+        theme_color: `#121212`,
         display: `standalone`,
         icon: `static/images/favicon.png`,
       },
