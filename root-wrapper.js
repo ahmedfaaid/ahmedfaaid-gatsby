@@ -11,6 +11,11 @@ const components = {
       {children}
     </h2>
   ),
+  h3: ({ children }) => (
+    <h3 className='font-heading text-2xl text-primary text-center my-4'>
+      {children}
+    </h3>
+  ),
   p: ({ children }) => (
     <p className='font-body font-thin text-lg text-white leading-relaxed'>
       {children}
