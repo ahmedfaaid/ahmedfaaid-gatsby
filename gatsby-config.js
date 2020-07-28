@@ -10,8 +10,7 @@ module.exports = {
   siteMetadata: {
     title: `Ahmed Faaid | Freelance Developer`,
     titleTemplate: `%s | Ahmed Faaid`,
-    description:
-      `Freelance web developer based in Hamilton, Canada, specializing in React, Node and JavaScript technologies`,
+    description: `Freelance web developer based in Hamilton, Canada, specializing in React, Node and JavaScript technologies`,
     siteUrl: `https://pedantic-keller-406b64.netlify.app/`,
     image: `/images/ahmed-w-2000.jpg`,
     twitterUsername: `@mr_amed`,
@@ -42,7 +41,20 @@ module.exports = {
         path: `${__dirname}/project-data`,
       },
     },
-    `gatsby-plugin-mdx`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-feed`,

@@ -32,7 +32,7 @@ const components = {
           getLineProps,
           getTokenProps,
         }) => (
-          <div className='overflow-scroll my-4'>
+          <div className='overflow-scroll my-4 md:overflow-hidden'>
             <pre className={`${className} p-4 float-left md:float-none`} style={style}>
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
@@ -45,6 +45,15 @@ const components = {
           </div>
         )}
       </Highlight>
+    );
+  },
+  'p.inlineCode': ({ children }) => (
+    <code className='bg-dark-5 px-1'>{children}</code>
+  ),
+  a: props => {
+    const { children } = props;
+    return (
+      <a {...props} className='text-primary hover:text-secondary border-b border-primary hover:border-secondary'>{children}</a>
     );
   },
 };
