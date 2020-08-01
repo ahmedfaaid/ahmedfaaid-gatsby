@@ -60,6 +60,14 @@ module.exports = {
         trackingId: process.env.TRACKING_ID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://ahmedfaaid.com',
+        sitemap: 'https://ahmedfaaid.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-feed`,
