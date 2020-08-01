@@ -18,6 +18,7 @@ export default function Layout({
 }) {
   return (
     <>
+      <SEO title={title} description={description} image={image} article={article} />
       <Helmet>
         {/* <title>Ahmed Faaid</title> */}
         <link href='hamburgers.css' rel='stylesheet' />
@@ -31,7 +32,6 @@ export default function Layout({
         >
         </script>
       </Helmet>
-      <SEO title={title} description={description} image={image} article={article} />
       <div className='relative min-h-screen'>
         <Header />
         <div className='container pb-16'>

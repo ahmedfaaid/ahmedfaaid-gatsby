@@ -61,11 +61,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: 'https://ahmedfaaid.com',
-        sitemap: 'https://ahmedfaaid.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        host: `https://ahmedfaaid.com`,
+        sitemap: `https://ahmedfaaid.com/sitemap.xml`,
+        policy: [
+          { userAgent: '*', Allow: '/' },
+          { userAgent: 'Twitterbot', Allow: '/' },
+        ],
       },
     },
     `gatsby-plugin-sitemap`,
