@@ -48,7 +48,7 @@ export default function SEO({
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
 
-      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:card' content='summary' />
 
       {twitterUsername && (
         <meta name='twitter:creator' content={twitterUsername} />
