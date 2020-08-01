@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
+import defaultImage from '../../static/images/ahmed-w2000.jpg';
 
 const query = graphql`
   query SEO {
@@ -12,7 +13,6 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         siteUrl
-        defaultImage: image
         twitterUsername
       }
     }
@@ -33,7 +33,6 @@ export default function SEO({
     titleTemplate,
     defaultDescription,
     siteUrl,
-    defaultImage,
     twitterUsername,
   } = site.siteMetadata;
 
