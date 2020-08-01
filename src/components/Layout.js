@@ -20,8 +20,6 @@ export default function Layout({
     <>
       <SEO title={title} description={description} image={image} article={article} />
       <Helmet>
-        {/* <title>Ahmed Faaid</title> */}
-        <link href='hamburgers.css' rel='stylesheet' />
         <link
           rel='stylesheet'
           href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'

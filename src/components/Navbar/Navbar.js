@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
@@ -10,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50 md:relative'>
-      <div className='flex justify-between items-center pl-4 pr-1'>
+      <div className='flex justify-between items-center px-4'>
         <div>
           <Link
             to='/'
@@ -19,17 +20,21 @@ export default function Navbar() {
             Ahmed F
           </Link>
         </div>
-        <button
-          className={`inline-block md:hidden hamburger hamburger--spring z-20 ${
-            menuOpen ? 'is-active' : ''
-          }`}
-          type='button'
-          onClick={openModalHandler}
-        >
-          <span className='hamburger-box'>
-            <span className='hamburger-inner' />
-          </span>
-        </button>
+        <div className='block md:hidden z-20'>
+          <button
+            className='flex items-center px-3 py-2 border rounded text-primary border-primary outline-none focus:outline-none'
+            onClick={openModalHandler}
+          >
+            <svg
+              className='fill-current h-3 w-3'
+              viewBox='0 0 20 20'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <title>Menu</title>
+              <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
+            </svg>
+          </button>
+        </div>
       </div>
       <div
         className={`${
