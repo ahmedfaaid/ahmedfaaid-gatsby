@@ -11,7 +11,7 @@ module.exports = {
     title: `Ahmed Faaid | Freelance Developer`,
     titleTemplate: `%s | Ahmed Faaid`,
     description: `Freelance web developer based in Hamilton, Canada, specializing in React, Node and JavaScript technologies`,
-    siteUrl: `https://pedantic-keller-406b64.netlify.app/`,
+    siteUrl: `https://ahmedfaaid.com/`,
     image: `/images/ahmed-w-2000.jpg`,
     twitterUsername: `@mr_amed`,
   },
