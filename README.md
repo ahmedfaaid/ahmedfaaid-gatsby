@@ -1,10 +1,3 @@
 # Personal Portfolio Redesign
 
-Redesigning and developing my personal website using Gatsby.js
-
-## TODO
-- [x] Contact Page
-- [x] Responsiveness
-- [x] Pages SEO
-- [x] Contact form functionality
-- [ ] First blog post
+Redesigned personal website with blog using [Gatsby](https://gatsbyjs.org) and [MDX](https://mdxjs.com)
