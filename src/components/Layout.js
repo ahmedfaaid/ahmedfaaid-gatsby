@@ -24,11 +24,6 @@ export default function Layout({
           rel='stylesheet'
           href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'
         />
-        <script
-          src='https://kit.fontawesome.com/163b6190b4.js'
-          crossOrigin='anonymous'
-        >
-        </script>
       </Helmet>
       <div className='relative min-h-screen'>
         <Header />

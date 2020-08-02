@@ -1,27 +1,27 @@
 [
   {
     "name": "HTML",
-    "icon": "fab fa-html5"
+    "icon": "devicon-html5-plain"
   },
   {
     "name": "CSS",
-    "icon": "fab fa-css3-alt"
+    "icon": "devicon-css3-plain"
   },
   {
     "name": "SASS/SCSS",
-    "icon": "fab fa-sass"
+    "icon": "devicon-sass-original"
   },
   {
     "name": "JavaScript",
-    "icon": "fab fa-js-square"
+    "icon": "devicon-javascript-plain"
   },
   {
     "name": "React",
-    "icon": "fab fa-react"
+    "icon": "devicon-react-original"
   },
   {
     "name": "Node",
-    "icon": "fab fa-node"
+    "icon": "devicon-nodejs-plain"
   },
   {
     "name": "MongoDB",

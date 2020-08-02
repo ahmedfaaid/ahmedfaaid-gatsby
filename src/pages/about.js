@@ -48,7 +48,7 @@ export default function About() {
           <div className='bg-dark-3 w-5/6 mx-auto my-4 rounded-sm shadow-md p-3 flex flex-wrap justify-center'>
             <>
               {allSkillsJson.nodes.map(node => (
-                <div className='w-1/2 md:w-1/3 m-auto text-center text-white p-8'>
+                <div className='w-1/2 md:w-1/3 m-auto text-center text-white p-8' key={node.name}>
                   <i className={`${node.icon} text-3xl`} />
                   <p className='mt-2'>{node.name}</p>
                 </div>
