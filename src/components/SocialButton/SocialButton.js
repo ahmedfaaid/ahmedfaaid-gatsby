@@ -13,7 +13,7 @@ export default function SocialButton({ name }) {
           : 'bg-github-white text-github-dark'
       } block my-6 sm:my-0 sm:inline-block px-6 py-2 w-32 rounded mx-auto sm:mx-4`}
     >
-      <i className={`fab fa-${name} mr-1`} />
+      <i className={`devicon-${name}-plain`} />
       {' '}
       {name}
     </a>
