@@ -20,6 +20,7 @@ export default function Layout({
     <>
       <SEO title={title} description={description} image={image} article={article} />
       <Helmet>
+        <html lang='en' />
         <link
           rel='preload'
           as='style'
