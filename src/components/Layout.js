@@ -21,7 +21,9 @@ export default function Layout({
       <SEO title={title} description={description} image={image} article={article} />
       <Helmet>
         <link
-          rel='stylesheet'
+          rel='preload'
+          as='style'
+          onLoad="this.rel = 'stylesheet'"
           href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'
         />
       </Helmet>
