@@ -34,7 +34,10 @@ module.exports = {
       },
     },
   },
-  purge: [
-    './src/**/*.js'
-  ],
+  purge: {
+    content: ['./src/**/*.js'],
+    options: {
+      whitelist: ['bg-dark-5', 'px-1'],
+    },
+  },
 };

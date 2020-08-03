@@ -10,8 +10,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50 md:relative md:mx-6'>
-      <div className='flex justify-between items-center px-4'>
+    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50 md:relative'>
+      <div className='flex justify-between items-center px-4 md:mx-6'>
         <div>
           <Link
             to='/'
@@ -39,7 +39,7 @@ export default function Navbar() {
       <div
         className={`${
           menuOpen ? 'flex' : 'hidden md:flex'
-        } justify-center md:justify-end items-center text-center bg-dark-1 md:bg-transparent absolute top-0 md:top-1/2 right-0 h-screen md:h-auto w-full md:w-auto z-10 md:pr-4 md:transform md:-translate-y-1/2`}
+        } justify-center md:justify-end items-center text-center bg-dark-1 md:bg-transparent absolute top-0 md:top-1/2 right-0 h-screen md:h-auto w-full md:w-auto z-10 md:pr-4 md:mr-6 md:transform md:-translate-y-1/2`}
       >
         <ul className='md:flex md:items-center'>
           <li className='mb-3 md:mb-0 py-4 text-2xl md:text-xl md:font-heading md:mr-5 tracking-wide font-light'>
