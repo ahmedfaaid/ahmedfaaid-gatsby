@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50 md:relative'>
+    <nav className='py-6 text-primary border-b-2 border-primary border-opacity-50 md:relative md:mx-6'>
       <div className='flex justify-between items-center px-4'>
         <div>
           <Link
