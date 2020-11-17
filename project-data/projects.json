@@ -30,5 +30,13 @@
     "description": "COVID-19 Tracker displays the latest global and country cases. It is built with NextJS with data from a REST API",
     "deployed": "https://covid-19-ahmed.now.sh/",
     "github": "https://github.com/ahmedfaaid/covid-19-tracker"
+  },
+  {
+    "projectId": "5",
+    "name": "Amour Essentials",
+    "image": "./images/amouressentials.png",
+    "description": "Amour Essentials is an e-commerce landing page built with NextJS and powered by Strapi and Cloudinary",
+    "deployed": "https://www.amouresntls.com/",
+    "github": "https://github.com/amour-mensah/amour-essentials"
   }
 ]
