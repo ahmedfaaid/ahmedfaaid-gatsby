@@ -8,12 +8,12 @@
     "icon": "devicon-css3-plain"
   },
   {
-    "name": "SASS/SCSS",
-    "icon": "devicon-sass-original"
-  },
-  {
     "name": "JavaScript",
     "icon": "devicon-javascript-plain"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "devicon-typescript-plain"
   },
   {
     "name": "React",
