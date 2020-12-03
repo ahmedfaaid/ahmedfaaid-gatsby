@@ -18,7 +18,12 @@ export default function Layout({
 }) {
   return (
     <>
-      <SEO title={title} description={description} image={image} article={article} />
+      <SEO
+        title={title}
+        description={description}
+        image={image}
+        article={article}
+      />
       <Helmet>
         <html lang='en' />
         <link
@@ -31,7 +36,7 @@ export default function Layout({
       <div className='relative min-h-screen'>
         <Header />
         <div className='container pb-16'>
-          <main>{children}</main>
+          <main className='overflow-x-hidden'>{children}</main>
         </div>
         <Footer />
       </div>
