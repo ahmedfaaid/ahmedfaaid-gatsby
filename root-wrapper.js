@@ -32,9 +32,9 @@ const components = {
         language='jsx'
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <div className='overflow-scroll my-4 md:overflow-hidden min-w-full'>
+          <div className='overflow-x-scroll my-4 md:overflow-hidden w-full'>
             <pre
-              className={`${className} p-4 float-left md:float-none min-w-full`}
+              className={`${className} p-4 float-left md:float-none`}
               style={style}
             >
               {tokens.map((line, i) => (
