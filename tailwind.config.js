@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 module.exports = {
   theme: {
     extend: {
@@ -32,13 +33,6 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
-    },
-  },
-  purge: {
-    content: ['./src/**/*.js'],
-    options: {
-      // whitelist: ['bg-dark-5', 'px-1', 'text-white'],
-      safelist: ['bg-dark-5', 'px-1', 'text-white'],
     },
   },
 };
