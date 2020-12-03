@@ -32,7 +32,7 @@ const components = {
         language='jsx'
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <div className='overflow-x-scroll my-4 md:overflow-hidden w-full'>
+          <div className='overflow-auto my-4 w-full'>
             <pre
               className={`${className} p-4 float-left md:float-none`}
               style={style}
