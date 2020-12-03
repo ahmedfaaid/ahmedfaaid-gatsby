@@ -36,7 +36,7 @@ export default function Layout({
       <div className='relative min-h-screen'>
         <Header />
         <div className='container pb-16'>
-          <main className='overflow-x-hidden'>{children}</main>
+          <main>{children}</main>
         </div>
         <Footer />
       </div>
