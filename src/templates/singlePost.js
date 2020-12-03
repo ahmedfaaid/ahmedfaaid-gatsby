@@ -55,7 +55,7 @@ export default function singlePost({ data: { mdx } }) {
         <p className='font-body italic font-light text-lg text-center text-white py-3'>
           {mdx.frontmatter.description}
         </p>
-        <div className='mb-4 w-full max-w-full'>
+        <div className='mb-4 w-full'>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
       </div>

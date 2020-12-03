@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
@@ -30,15 +31,12 @@ const components = {
         theme={nightOwl}
         language='jsx'
       >
-        {({
-          className,
-          style,
-          tokens,
-          getLineProps,
-          getTokenProps,
-        }) => (
-          <div className='overflow-scroll my-4 md:overflow-hidden'>
-            <pre className={`${className} p-4 float-left md:float-none`} style={style}>
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <div className='overflow-scroll my-4 md:overflow-hidden min-w-full'>
+            <pre
+              className={`${className} p-4 float-left md:float-none`}
+              style={style}
+            >
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
@@ -58,7 +56,12 @@ const components = {
   a: props => {
     const { children } = props;
     return (
-      <a {...props} className='text-primary hover:text-secondary border-b border-primary hover:border-secondary'>{children}</a>
+      <a
+        {...props}
+        className='text-primary hover:text-secondary border-b border-primary hover:border-secondary'
+      >
+        {children}
+      </a>
     );
   },
 };
