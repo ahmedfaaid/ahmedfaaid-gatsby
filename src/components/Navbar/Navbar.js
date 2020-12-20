@@ -40,7 +40,7 @@ export default function Navbar() {
         <div
           className={`${
             menuOpen ? 'flex' : 'hidden md:inline-flex'
-          } justify-center md:justify-end items-center text-center bg-dark-1 md:bg-transparent absolute md:relative top-0 right-0 h-screen md:h-auto md:w-auto z-10 md:pr-4 md:mr-6`}
+          } justify-center md:justify-end items-center text-center bg-dark-1 md:bg-transparent absolute md:relative top-0 right-0 h-screen md:h-auto md:w-auto z-10 md:pr-4 md:mr-6 w-full`}
         >
           <ul className='md:flex md:items-center'>
             <li className='mb-3 md:mb-0 py-4 text-2xl md:text-xl md:font-heading md:mr-5 tracking-wide font-light'>
