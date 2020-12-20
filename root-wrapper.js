@@ -32,8 +32,11 @@ const components = {
         language='jsx'
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <div className='overflow-x-auto my-4'>
-            <pre className={`${className} p-4 float-left`} style={style}>
+          <div className='max-w-full'>
+            <pre
+              className={`${className} p-4 float-left overflow-scroll`}
+              style={style}
+            >
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
