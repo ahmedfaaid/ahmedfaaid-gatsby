@@ -38,8 +38,7 @@ These are the style files that are generated at build time. I want you to notice
 
 ## Purging CSS
 
-TailwindCSS gives you the option to purg the unused CSS that is generated so
-hat it is not added to the final build. In my personal portfolio, I used <a href='https://purgecss.com' target='_blank'>purgecss</a> and here is my config file.
+TailwindCSS gives you the option to purge the unused CSS that is generated so that it is not added to the final build. In my personal portfolio, I use <a href='https://purgecss.com' target='_blank'>purgecss</a> to remove the unused styles and classes. Here is my config file.
 
 <br />
 
@@ -63,11 +62,11 @@ module.exports = {
 
 <br />
 
-I am adding the purgecss configuration to my postcss configuration _but_, I am only requiring it if I am in the production environment. I want access to all generated styles in my development environment.
+Here, I add purgecss to the postcss configuration _but_, it is only active in the production enviroment. I want access to all generated styles in my development environment.
 
 <br />
 
-In the sneaker news website, I am using <a href='https://www.gatsbyjs.com/plugins/gatsby-plugin-purgecss/' target='_blank'>gatsby-plugin-purgecss</a> and here is my config:
+In the sneaker news website, I use <a href='https://www.gatsbyjs.com/plugins/gatsby-plugin-purgecss/' target='_blank'>gatsby-plugin-purgecss</a>. Here is my config:
 
 <br />
 
@@ -91,7 +90,7 @@ module.exports = {
 
 <br />
 
-Here, I am passing tailwind as an option to let the plugin what I am using for this website. I am also ignoring `react-responsive-carousel` which is a package that gives me an easy carousel component. I do not want any of the styles associated with this package to be purged.
+Here, I pass tailwind as an option to let the plugin know what I built the website with. I also ignore `react-responsive-carousel` which is a package that gives me an easy carousel component. I do not want any of the styles associated with this package to be purged.
 
 <br />
 
@@ -113,8 +112,12 @@ Take a look at how much code has been removed and **LOOK AT THE FILE SIZES**. 7.
 
 ## Conclusion
 
-To sum up, TailwindCSS is a very valuable tool for building your projects fast but you shouldn't ship the everything that it generates. You should only include the CSS that is actually used by your project. Using the solutions above are some of the ways to remove all the unused CSS that TailwindCSS generates.
+To sum up, TailwindCSS is a very valuable tool for building your projects fast but you shouldn't ship everything that it generates. You should only include the CSS that is actually used by your project. Using the solutions above are some of the ways to remove all the unused CSS that TailwindCSS generates.
 
 <br />
 
-Hopefully this helps you reduce the bundle sizes of your projects.
+These solutions however aren't specific to TailwindCSS and can be used to remove any classes or styles that aren't active when the website is built.
+
+<br />
+
+Hopefully you find this helpful and applicable to your projects.
