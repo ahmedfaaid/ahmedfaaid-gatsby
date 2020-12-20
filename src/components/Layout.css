@@ -12,6 +12,7 @@ body::-webkit-scrollbar {
 
 pre {
   overflow: initial;
+  white-space: pre-wrap;
 }
 
 @tailwind components;
