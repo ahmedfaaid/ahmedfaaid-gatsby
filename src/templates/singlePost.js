@@ -35,10 +35,10 @@ export default function singlePost({ data: { mdx } }) {
       image={mdx.frontmatter.featuredImage.childImageSharp.fluid.src}
       article
     >
-      <h1 className='font-heading text-4xl text-white text-center my-4'>
+      <h1 className='font-heading text-2xl sm:text-4xl text-white text-center my-4 w-full sm:w-2/3 mx-auto'>
         {mdx.frontmatter.title}
       </h1>
-      <div className='px-4 w-full'>
+      <div className='px-4 w-full sm:w-2/3 mx-auto'>
         <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
         <p className='my-4 text-center font-body text-white'>
           Photo by{' '}
