@@ -38,5 +38,13 @@
     "description": "Amour Essentials is an e-commerce landing page built with NextJS and powered by Strapi and Cloudinary",
     "deployed": "https://www.amouresntls.com/",
     "github": "https://github.com/amour-mensah/amour-essentials"
+  },
+  {
+    "projectId": "6",
+    "name": "Tritan Group",
+    "image": "./images/tritan-group.png",
+    "description": "Tritan Group's company website and job board is built with NextJS content powered by Strapi",
+    "deployed": "https://tritan.ca",
+    "github": "https://github.com/ahmedfaaid/tritan-group"
   }
 ]
