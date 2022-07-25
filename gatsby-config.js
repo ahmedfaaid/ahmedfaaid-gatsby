@@ -5,6 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -88,14 +92,16 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => allMdx.edges.map(edge => ({
-              ...edge.node.frontmatter,
-              description: edge.node.excerpt,
-              date: edge.node.frontmatter.date,
-              url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-              guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-              custom_elements: [{ 'content:encoded': edge.node.html }],
-            })),
+            serialize: ({ query: { site, allMdx } }) =>
+              // eslint-disable-next-line implicit-arrow-linebreak
+              allMdx.edges.map(edge => ({
+                ...edge.node.frontmatter,
+                description: edge.node.excerpt,
+                date: edge.node.frontmatter.date,
+                url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                custom_elements: [{ 'content:encoded': edge.node.html }],
+              })),
             query: `
               {
                 allMdx(
