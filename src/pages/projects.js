@@ -5,7 +5,7 @@ import Project from '../components/Project/Project';
 
 export const allProjectsQuery = graphql`
   query {
-    allProjectsJson(sort: {fields: projectId, order: DESC}) {
+    allProjectsJson(sort: { fields: projectId, order: DESC }) {
       edges {
         node {
           deployed
@@ -15,9 +15,7 @@ export const allProjectsQuery = graphql`
           name
           image {
             childImageSharp {
-              fluid(maxWidth: 600, maxHeight: 350) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 400)
             }
           }
         }
