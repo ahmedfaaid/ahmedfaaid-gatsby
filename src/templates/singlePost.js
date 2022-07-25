@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/Layout';
@@ -15,9 +15,7 @@ export const postQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 800)
           }
         }
         imageCreator
@@ -28,18 +26,26 @@ export const postQuery = graphql`
 `;
 
 export default function singlePost({ data: { mdx } }) {
+  const image = getImage(mdx.frontmatter.featuredImage);
+  const imgSrc = getSrc(mdx.frontmatter.featuredImage);
+
   return (
     <Layout
       title={mdx.frontmatter.title}
       description={mdx.frontmatter.description}
-      image={mdx.frontmatter.featuredImage.childImageSharp.fluid.src}
+      image={imgSrc}
       article
     >
       <h1 className='font-heading text-2xl sm:text-4xl text-white text-center my-4 w-full sm:w-2/3 mx-auto'>
         {mdx.frontmatter.title}
       </h1>
       <div className='px-4 w-full sm:w-2/3 mx-auto'>
-        <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
+        <GatsbyImage
+          image={image}
+          alt={mdx.frontmatter.title}
+          className='w-full'
+          objectFit='contain'
+        />
         <p className='my-4 text-center font-body text-white'>
           Photo by{' '}
           <a
