@@ -16,9 +16,7 @@ export const allPostsQuery = graphql`
           description
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 400)
             }
           }
         }
@@ -49,7 +47,7 @@ export default function Blog() {
                     title={frontmatter.title}
                     description={frontmatter.description}
                     slug={fields.slug}
-                    fluid={frontmatter.featuredImage.childImageSharp.fluid}
+                    imageData={frontmatter.featuredImage}
                   />
                 ))}
               </div>
