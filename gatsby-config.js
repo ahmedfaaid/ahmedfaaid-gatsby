@@ -56,6 +56,7 @@ module.exports = {
             },
           },
         ],
+        posts: require.resolve('./src/templates/singlePost.js'),
       },
     },
     {
@@ -64,6 +65,7 @@ module.exports = {
         trackingId: process.env.TRACKING_ID,
       },
     },
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {

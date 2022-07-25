@@ -44,15 +44,13 @@ export default function Blog() {
             return (
               <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2'>
                 {postArray.map(({ id, frontmatter, fields }) => (
-                  <>
-                    <Post
-                      key={id}
-                      title={frontmatter.title}
-                      description={frontmatter.description}
-                      slug={fields.slug}
-                      fluid={frontmatter.featuredImage.childImageSharp.fluid}
-                    />
-                  </>
+                  <Post
+                    key={id}
+                    title={frontmatter.title}
+                    description={frontmatter.description}
+                    slug={fields.slug}
+                    fluid={frontmatter.featuredImage.childImageSharp.fluid}
+                  />
                 ))}
               </div>
             );
