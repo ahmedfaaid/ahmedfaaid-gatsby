@@ -18,6 +18,11 @@ export const postQuery = graphql`
             gatsbyImageData(width: 800)
           }
         }
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(width: 800)
+          }
+        }
         imageCreator
         imageLink
       }
@@ -62,7 +67,9 @@ export default function singlePost({ data: { mdx } }) {
           {mdx.frontmatter.description}
         </p>
         <div className='mb-4 w-full'>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer embeddedImages={mdx.frontmatter.embeddedImagesLocal}>
+            {mdx.body}
+          </MDXRenderer>
         </div>
       </div>
     </Layout>

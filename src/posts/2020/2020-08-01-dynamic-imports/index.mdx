@@ -2,11 +2,16 @@
 title: Importing a Browser Only Package Into Next.js
 description: How to import a package that only works in the browser into Next.js
 featuredImage: ./chuttersnap-fN603qcEA7g-unsplash.jpg
+embeddedImagesLocal:
+  - ./nossr1.png
+  - ./nossr2.png
 imageCreator: chuttersnap
 imageLink: https://unsplash.com/photos/fN603qcEA7g
 date: 2020-08-01
 published: true
 ---
+
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 I find myself reaching for Next.js everytime I need to prototype an idea or start building a new side project. Next provides structure for building your app and comes prebundled with routing and code spliting. The main feature of Next is Server Side Rendering or SSR allowing your site/app's HTML to be rendered on the server and displayed in your browser. This has its pros and cons but I am not here to discuss the benefits of SSR.
 
@@ -101,7 +106,13 @@ export default function Home() {
 Now run the server using `npm run dev` and open the site in your browser at `https://localhost:3000`.
 
 Your page should look like this:
-![NoSSR](./nossr1.png)
+
+<GatsbyImage
+  image={getImage(props.embeddedImages[0])}
+  className='w-full my-2'
+  objectFit='contain'
+  alt='Initial set up'
+/>
 
 ### Chart Component
 
@@ -185,7 +196,13 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 ```
 
 Now restart your server and reload the page in the browser. Voila! The page should look like this:
-![NoSSR](./nossr2.png)
+
+<GatsbyImage
+  image={getImage(props.embeddedImages[1])}
+  className='w-full my-2'
+  objectFit='contain'
+  alt='Final result'
+/>
 
 ### Conclusion
 
