@@ -2,11 +2,18 @@
 title: Reduce Your CSS Bundle Size When Using TailwindCSS
 description: How to purge unused CSS when using TailwindCSS to reduce bundle size
 featuredImage: ./ruben-bagues-ZzApzgh5lxo-unsplash.jpg
+embeddedImagesLocal:
+  - ./portfolio-unpurged.png
+  - ./sneak-unpurged.png
+  - ./portfolio-purged.png
+  - ./sneak-purged.png
 imageCreator: Rubén Bagüés
 imageLink: https://unsplash.com/photos/ZzApzgh5lxo
 date: 2020-12-21
 published: true
 ---
+
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 TailwindCSS is a utility-first framework which generates CSS classes based on a configuration file. It is sort of an alternative to Bootstrap or MaterialUI.
 
@@ -24,11 +31,21 @@ I decided to do a little bit of research about the file sizes for the TailwindCS
 
 <br />
 
-![portfolio-unpurged](./portfolio-unpurged.png)
+<GatsbyImage
+  image={getImage(props.embeddedImages[0])}
+  className='w-full mb-2'
+  objectFit='contain'
+  alt='Unpurged portfolio styles'
+/>
 
 <br />
 
-![sneakersseur-unpurged](./sneak-unpurged.png)
+<GatsbyImage
+  image={getImage(props.embeddedImages[1])}
+  className='w-full mb-2'
+  objectFit='contain'
+  alt='Unpurges sneaker website styles'
+/>
 
 <br />
 
@@ -100,11 +117,21 @@ Look at these images after purging the css:
 
 <br />
 
-![portfolio-purged](./portfolio-purged.png)
+<GatsbyImage
+  image={getImage(props.embeddedImages[2])}
+  className='w-full mb-2'
+  objectFit='contain'
+  alt='Purged portfolio styles'
+/>
 
 <br />
 
-![sneak-purged](./sneak-purged.png)
+<GatsbyImage
+  image={getImage(props.embeddedImages[3])}
+  className='w-full mb-2'
+  objectFit='contain'
+  alt='Purged sneaker website styles'
+/>
 
 <br />
 
