@@ -57,7 +57,6 @@ module.exports = {
             },
           },
         ],
-        posts: require.resolve('./src/templates/singlePost.js'),
       },
     },
     {
