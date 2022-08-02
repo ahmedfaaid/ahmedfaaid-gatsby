@@ -78,60 +78,60 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) =>
-              // eslint-disable-next-line implicit-arrow-linebreak
-              allMdx.edges.map(edge => ({
-                ...edge.node.frontmatter,
-                description: edge.node.excerpt,
-                date: edge.node.frontmatter.date,
-                url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-                guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-                custom_elements: [{ 'content:encoded': edge.node.html }],
-              })),
-            query: `
-              {
-                allMdx(
-                  filter: { frontmatter: { published: { eq: true } } }
-                  sort: { fields: frontmatter___date, order: DESC }
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: `Ahmed Faaid's RSS feed`,
-            match: '^/blog/',
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-feed`,
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             title
+    //             description
+    //             siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     feeds: [
+    //       {
+    //         serialize: ({ query: { site, allMdx } }) =>
+    //           // eslint-disable-next-line implicit-arrow-linebreak
+    //           allMdx.edges.map(edge => ({
+    //             ...edge.node.frontmatter,
+    //             description: edge.node.excerpt,
+    //             date: edge.node.frontmatter.date,
+    //             url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+    //             guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+    //             custom_elements: [{ 'content:encoded': edge.node.html }],
+    //           })),
+    //         query: `
+    //           {
+    //             allMdx(
+    //               filter: { frontmatter: { published: { eq: true } } }
+    //               sort: { fields: frontmatter___date, order: DESC }
+    //             ) {
+    //               edges {
+    //                 node {
+    //                   excerpt
+    //                   html
+    //                   fields {
+    //                     slug
+    //                   }
+    //                   frontmatter {
+    //                     title
+    //                   }
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         `,
+    //         output: '/rss.xml',
+    //         title: `Ahmed Faaid's RSS feed`,
+    //         match: '^/blog/',
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
