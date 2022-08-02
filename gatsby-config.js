@@ -127,7 +127,7 @@ module.exports = {
             `,
             output: '/rss.xml',
             title: `Ahmed Faaid's RSS feed`,
-            // match: '^/blog/',
+            match: '^/blog/',
           },
         ],
       },
